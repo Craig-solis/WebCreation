@@ -1,0 +1,68 @@
+body {
+    background-image: url(Images/whitegradient.jpg);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 10px;
+    background-repeat: no-repeat;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    display:flex;
+    background-color: black;
+    margin-bottom: 0px;
+    height: 100px;
+    width: 100%;
+}
+
+nav .nav-links{
+    display: flex;
+    width: 100%;
+    text-align: right;
+    list-style-type: none;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav .logocont {
+    background-image: url(Images/CSMK1-no-background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    display:flex;
+    width: 100px; 
+    height: 100px;
+}
+
+nav .tabscont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    width: auto;
+    margin: 0 auto;
+    gap: 40px;
+    text-decoration: none;
+    font-size: 20px
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-top: 10px;
+}
+
+section .centerlogo {
+    background-image: url(Images/CSMK1-no-background.png);
+    background-size: cover; /* Ensures the image fills the circle */
+    background-repeat: no-repeat;
+    background-position: center; /* Centers the image within the circle */
+    width: 300px; /* Ensure width and height are equal */
+    height: 270px;
+    border-radius: 50%; /* Makes the container circular */
+    margin: 0 auto; /* Centers the circle horizontally */
+}
