@@ -7,6 +7,15 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+header {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 nav {
     display:flex;
     background-color: black;
@@ -26,10 +35,10 @@ nav .nav-links{
 }
 
 nav .logocont {
-    background-image: url(Images/CSMK1-no-background.png);
-    background-size: contain;
+    background-image: url(Images/CSMK1-2.png);
+    background-size: 90%;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center center;
     display:flex;
     width: 100px; 
     height: 100px;
@@ -43,9 +52,10 @@ nav .tabscont {
     font-size: 15px;
     width: auto;
     margin: 0 auto;
-    gap: 40px;
+    gap: 35px;
     text-decoration: none;
-    font-size: 20px
+    font-size: 20px;
+    padding-right: 125px;
 }
 
 .section1 {
@@ -56,13 +66,36 @@ nav .tabscont {
     margin-top: 10px;
 }
 
-section .centerlogo {
-    background-image: url(Images/CSMK1-no-background.png);
-    background-size: cover; /* Ensures the image fills the circle */
+.centerlogo {
+    background-color: black;
+    background-image: url(Images/CSMK1-2.png);
+    background-size: 95%; /* Enlarges the image within the circle */
     background-repeat: no-repeat;
-    background-position: center; /* Centers the image within the circle */
-    width: 300px; /* Ensure width and height are equal */
-    height: 270px;
+    background-position: center center; /* Centers the image within the circle */
+    width: 250px; /* Ensure width and height are equal */
+    height: 250px;
     border-radius: 50%; /* Makes the container circular */
-    margin: 0 auto; /* Centers the circle horizontally */
+    margin: 5px auto; /* Centers the circle horizontally */
+}
+
+.middlequote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.featured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
 }
