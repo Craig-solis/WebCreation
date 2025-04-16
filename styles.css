@@ -1,10 +1,17 @@
 body {
+    margin: 0;
+    padding: 0px;
+    background-repeat: no-repeat;
+    font-family:'Times New Roman', Times, serif
+}
+
+.top-container {
     background-image: url(Images/whitegradient.jpg);
     background-repeat: no-repeat;
-    margin: 0;
-    padding: 10px;
-    background-repeat: no-repeat;
-    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
 }
 
 header {
@@ -18,13 +25,14 @@ header {
 
 nav {
     display:flex;
-    background-color: black;
     margin-bottom: 0px;
     height: 100px;
-    width: 100%;
+    width: auto;
+    margin: 10px;
+    text-transform: uppercase;
 }
 
-nav .nav-links{
+nav .nav-links {
     display: flex;
     width: 100%;
     text-align: right;
@@ -32,6 +40,7 @@ nav .nav-links{
     height: 100%;
     padding: 0px;
     margin: 0px;
+    text-decoration: none;
 }
 
 nav .logocont {
@@ -39,16 +48,29 @@ nav .logocont {
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: black;
     display:flex;
     width: 100px; 
     height: 100px;
+}
+
+nav .logocont a {
+    display: block; /* Ensures the link covers the entire logo container */
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Removes underline from the link */
+}
+
+nav .logocont a:hover {
+    text-shadow: 0 0 15px rgb(0, 0, 0); /* Adds a glowing effect to the logo */
+    transition: 0.3s ease; /* Smooth transition for the hover effect */
 }
 
 nav .tabscont {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15px;
     width: auto;
     margin: 0 auto;
@@ -56,6 +78,18 @@ nav .tabscont {
     text-decoration: none;
     font-size: 20px;
     padding-right: 125px;
+}
+
+nav .tabscont .tabs a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.2s ease; /* Smooth transition for hover effects */
+}
+
+nav .tabscont .tabs a:hover {
+    text-shadow: 0 5px 5px rgb(59, 59, 59); /* Creates a shadow below the word */
+    transform: translateY(-10px); /* Makes the word appear to rise */
+    transition: transform 0.2s ease, text-shadow 0.2s ease; /* Smooth transition for the hover effect */
 }
 
 .section1 {
@@ -67,6 +101,7 @@ nav .tabscont {
 }
 
 .centerlogo {
+    display: flex;
     background-color: black;
     background-image: url(Images/CSMK1-2.png);
     background-size: 95%; /* Enlarges the image within the circle */
@@ -76,20 +111,39 @@ nav .tabscont {
     height: 250px;
     border-radius: 50%; /* Makes the container circular */
     margin: 5px auto; /* Centers the circle horizontally */
+    border: white 5px solid;
+    margin-top: 15px;
 }
 
 .middlequote {
     display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Centers the text vertically */
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 50px 0 50px; /* Centers the box horizontally */
+    padding: 20px; /* Adds space inside the box */
+    width: auto; /* Fixed width for the box */
+}
+
+h2 {
+    display: flex;
+    margin-left: 20px; 
+    font-style: italic;
+
+}
+.featured {
+    display: flex;
     justify-content: center;
-    align-items: center;
     color: black;
     font-size: 15px;
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
 }
-
-.featured {
+ .featured .content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,4 +152,5 @@ nav .tabscont {
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
-}
+    width: 100%;
+ }
