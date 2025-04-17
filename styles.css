@@ -154,3 +154,33 @@ h2 {
     margin-top: 10px;
     width: 100%;
  }
+ /*------------------------------------ Profile Section ------------------------*/
+ .ProfileContainer {
+    display: flex;
+    flex-direction: row; /* Ensures children are laid out side by side */
+    height: 550px;
+    margin:0; /* Centers the container horizontally */
+    padding: 0;
+    background-color: rgba(146, 146, 146, 0.404);
+}
+
+ .picture {
+    background-image: url(Images/Headshot.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center; /* Centers the image within the circle */
+    display: flex;
+    height: 350px;
+    width: 350px;
+    margin: auto; /* Centers the picture within the container */
+    align-self: flex-start; /* Moves the picture to the top of the container */
+    margin-left: 150px;
+}
+
+ .ProfileText {
+    display: flex;
+    flex-direction: column; /* Stacks text content vertically */
+    justify-content: center; /* Centers the text vertically */
+    padding: 20px; /* Adds spacing around the text */
+    width: 350px;
+ }
