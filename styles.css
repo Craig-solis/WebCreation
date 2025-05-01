@@ -6,21 +6,37 @@ body {
 }
 
 .top-container {
-    background-image: url(Images/whitegradient.jpg);
-    background-repeat: no-repeat;
-    display: flex;
-    height: auto;
+    position: relative;
     width: 100%;
-    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Sends video to the background */
+}
+
+
 header {
+    padding:10px;
     display: flex;
     justify-content: right;
     align-items: right;
-    color: black;
     font-size: 20px;
     font-weight: bold;
+    gap: 15px;
+    color:white;
+}
+
+.fa {
+    text-decoration: none;
+    color: white;;
 }
 
 nav {
@@ -33,6 +49,7 @@ nav {
 }
 
 nav .nav-links {
+    color: white;
     display: flex;
     width: 100%;
     text-align: right;
@@ -44,11 +61,11 @@ nav .nav-links {
 }
 
 nav .logocont {
-    background-image: url(Images/CSMK1-2.png);
+    display:flex;
+    background-image: url(Images/CSMK1-no-background.png);
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: black;
     display:flex;
     width: 100px; 
     height: 100px;
@@ -70,7 +87,6 @@ nav .tabscont {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(0, 0, 0);
     font-size: 15px;
     width: auto;
     margin: 0 auto;
@@ -81,7 +97,7 @@ nav .tabscont {
 }
 
 nav .tabscont .tabs a {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     transition: 0.2s ease; /* Smooth transition for hover effects */
 }
@@ -92,18 +108,9 @@ nav .tabscont .tabs a:hover {
     transition: transform 0.2s ease, text-shadow 0.2s ease; /* Smooth transition for the hover effect */
 }
 
-.section1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    margin-top: 10px;
-}
-
 .centerlogo {
     display: flex;
-    background-color: black;
-    background-image: url(Images/CSMK1-2.png);
+    background-image: url(Images/CSMK1-no-background.png);
     background-size: 95%; /* Enlarges the image within the circle */
     background-repeat: no-repeat;
     background-position: center center; /* Centers the image within the circle */
@@ -111,7 +118,6 @@ nav .tabscont .tabs a:hover {
     height: 250px;
     border-radius: 50%; /* Makes the container circular */
     margin: 5px auto; /* Centers the circle horizontally */
-    border: white 5px solid;
     margin-top: 15px;
 }
 
@@ -119,7 +125,7 @@ nav .tabscont .tabs a:hover {
     display: flex;
     justify-content: center; /* Centers the text horizontally */
     align-items: center; /* Centers the text vertically */
-    color: black;
+    color: white;
     font-size: 15px;
     font-weight: bold;
     text-align: center;
@@ -128,32 +134,6 @@ nav .tabscont .tabs a:hover {
     width: auto; /* Fixed width for the box */
 }
 
-h2 {
-    display: flex;
-    margin-left: 20px; 
-    font-style: italic;
-
-}
-.featured {
-    display: flex;
-    justify-content: center;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-}
- .featured .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-    width: 100%;
- }
  /*------------------------------------ Profile Section ------------------------*/
  .ProfileContainer {
     background-image: url(Images/Tech.png);

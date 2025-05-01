@@ -4,42 +4,50 @@
 <head>
     <title>CS MK.1</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="top-container">
-        <header>Follow me: </header>
+    <section class="top-container">
+        <video autoplay muted loop id="topVideo">
+            <source src="Videos/WorldTech.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    
+        <!-- Overlay content -->
+        <div class="overlay">
+            <header>
+                Follow me:
+                <a href="https://www.instagram.com/craig.solis24" class="fa fa-instagram"></a>
+                <a href="https://www.linkedin.com/in/craig-solis" class="fa fa-linkedin"></a>
+            </header>
+    
             <nav>           
                 <ul class="nav-links">
-                    <div class="logocont">
-                        <a href="index.html" alt="Homepage"></a>
-                    </div>
                     <div class="tabscont">
-                    <li class="tabs"><a href="Pages/Profile.html" alt="Profile">Portfolio</a></li>
-                    <li class="tabs"><a href="Pages/Workout.html" alt="Workouts">Workouts</a></li>
-                    <li class="tabs"><a href="Pages/Contact.html" alt="Contact">Contact</a> </li>
+                        <li class="tabs"><a href="Pages/Profile.html" alt="Profile">Portfolio</a></li>
+                        <li class="tabs"><a href="Pages/Workout.html" alt="Workouts">Workouts</a></li>
+                        <li class="tabs"><a href="Pages/Contact.html" alt="Contact">Contact</a></li>
                     </div>
                 </ul>
             </nav>
-        <section>
-            <div class="centerlogo"></div>
-            <div class="middlequote">
-                <h3>"You, me, or nobody is gonna hit as hard as life. 
-                But it ain't about how hard you hit. 
-                It's about how hard you can get hit and keep moving forward; 
-                how much you can take and keep moving forward. 
-                That's how winning is done!" <br><em> - Rocky Balboa</em></h3>
-            </div>
-        </section>
-    </div>
-
-    <div>
-        <h2>Featured</h2>
-        <section class="featured">
-            <div class="content">Diviation 1</div>
-            <div class="content">Diviation 2</div>
-        </section>
-    </div>
+    
+            <section>
+                <div class="centerlogo"></div>
+                <div class="middlequote">
+                    <h3>"You, me, or nobody is gonna hit as hard as life.
+                    But it ain't about how hard you hit.
+                    It's about how hard you can get hit... done!" <br><em> - Rocky Balboa</em></h3>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <section class="aboutMe">
+        <header>About Me</header>
+        <div class="content">Diviation 1</div>
+        <div class="content">Diviation 2</div>
+    </section>
 </body>
 
 </html>
