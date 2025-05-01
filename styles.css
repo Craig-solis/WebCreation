@@ -15,7 +15,7 @@ body {
 video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the video covers the entire container */
     position: absolute;
     top: 0;
     left: 0;
@@ -55,11 +55,35 @@ nav .nav-links {
     text-align: right;
     list-style-type: none;
     height: 100%;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
     text-decoration: none;
+    text-align: center;
+    align-items: center;
 }
 
+nav .tabscont {
+    margin: 0 auto;
+    transform: translateX(-10px);
+    display: flex;
+    width: auto;
+    gap: 55px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav .tabscont .tabs a {
+    color: white;
+    text-decoration: underline;
+    transition: 0.2s ease; /* Smooth transition for hover effects */
+}
+
+nav .tabscont .tabs a:hover {
+    text-shadow: 0 0 10px rgb(255, 255, 255); /* Creates a shadow below the word */
+    transform: translateY(-10px); /* Makes the word appear to rise */
+    transition: transform 0.2s ease, text-shadow 0.2s ease; /* Smooth transition for the hover effect */
+}
+
+/** If logo to go to the left in NAV bar.
 nav .logocont {
     display:flex;
     background-image: url(Images/CSMK1-no-background.png);
@@ -72,50 +96,26 @@ nav .logocont {
 }
 
 nav .logocont a {
-    display: block; /* Ensures the link covers the entire logo container */
+    display: block;
     width: 100%;
     height: 100%;
-    text-decoration: none; /* Removes underline from the link */
+    text-decoration: none;
 }
 
 nav .logocont a:hover {
-    text-shadow: 0 0 15px rgb(0, 0, 0); /* Adds a glowing effect to the logo */
-    transition: 0.3s ease; /* Smooth transition for the hover effect */
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+    transition: 0.3s ease;
 }
-
-nav .tabscont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    width: auto;
-    margin: 0 auto;
-    gap: 35px;
-    text-decoration: none;
-    font-size: 20px;
-    padding-right: 125px;
-}
-
-nav .tabscont .tabs a {
-    color: white;
-    text-decoration: none;
-    transition: 0.2s ease; /* Smooth transition for hover effects */
-}
-
-nav .tabscont .tabs a:hover {
-    text-shadow: 0 5px 5px rgb(59, 59, 59); /* Creates a shadow below the word */
-    transform: translateY(-10px); /* Makes the word appear to rise */
-    transition: transform 0.2s ease, text-shadow 0.2s ease; /* Smooth transition for the hover effect */
-}
+*/
 
 .centerlogo {
     display: flex;
     background-image: url(Images/CSMK1-no-background.png);
     background-size: 95%; /* Enlarges the image within the circle */
     background-repeat: no-repeat;
-    background-position: center center; /* Centers the image within the circle */
-    width: 250px; /* Ensure width and height are equal */
-    height: 250px;
+    background-position: center center;
+    width: 350px; /* Ensure width and height are equal */
+    height: 350px;
     border-radius: 50%; /* Makes the container circular */
     margin: 5px auto; /* Centers the circle horizontally */
     margin-top: 15px;
@@ -132,6 +132,60 @@ nav .tabscont .tabs a:hover {
     margin: 0 50px 0 50px; /* Centers the box horizontally */
     padding: 20px; /* Adds space inside the box */
     width: auto; /* Fixed width for the box */
+}
+/* About Me Section */
+.aboutMeCont {
+    display:flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 0 350px 0 350px;
+    background-color: black;
+}
+
+.MEimg {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(230, 230, 230);
+    width: 425px;
+    padding: 35px;
+}
+
+.MEcontent {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(230, 230, 230);
+}
+
+.MEcontent p{
+    display: flex;
+    text-align: center;
+    color:rgb(53, 53, 53);
+    font-size: 20px;
+    padding: 2px;
+}
+
+.MEcontent h2 {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    color:rgb(53, 53, 53);
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.aboutMeBox {
+    display: flex; /* Aligns the image and content side by side */
+    gap: 20px; /* Adds spacing between the image and content */
+    padding: 10px;
+    background-color: #fff; /* Optional: Adds a background color */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 0 15px 5px white; /* Creates the glowing shadow */
+}
+.MEimg img {
+    max-width: 250px; /* Optional: Adjusts the image size */
+    border-radius: 5px;
 }
 
  /*------------------------------------ Profile Section ------------------------*/
