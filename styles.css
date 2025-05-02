@@ -1,8 +1,11 @@
 body {
+    display: flex;
     margin: 0;
-    padding: 0px;
+    padding: 0;
     background-repeat: no-repeat;
-    font-family:'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
+    flex-direction: column;
+    width: 100%;
 }
 
 .top-container {
@@ -10,200 +13,201 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire container */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Sends video to the background */
+    z-index: -1;
 }
 
-
 header {
-    padding:10px;
+    padding: 10px;
     display: flex;
-    justify-content: right;
-    align-items: right;
-    font-size: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.25rem;
     font-weight: bold;
     gap: 15px;
-    color:white;
+    color: white;
 }
 
 .fa {
     text-decoration: none;
-    color: white;;
+    color: white;
 }
 
 nav {
-    display:flex;
-    margin-bottom: 0px;
-    height: 100px;
-    width: auto;
-    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    height: auto;
+    width: 100%;
     text-transform: uppercase;
 }
 
 nav .nav-links {
     color: white;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    text-align: right;
     list-style-type: none;
-    height: 100%;
     padding: 0;
-    text-decoration: none;
     text-align: center;
     align-items: center;
 }
 
 nav .tabscont {
     margin: 0 auto;
-    transform: translateX(-10px);
     display: flex;
-    width: auto;
-    gap: 55px;
+    flex-wrap: wrap;
+    gap: 2rem;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
 nav .tabscont .tabs a {
     color: white;
     text-decoration: underline;
-    transition: 0.2s ease; /* Smooth transition for hover effects */
+    transition: 0.2s ease;
 }
 
 nav .tabscont .tabs a:hover {
-    text-shadow: 0 0 10px rgb(255, 255, 255); /* Creates a shadow below the word */
-    transform: translateY(-10px); /* Makes the word appear to rise */
-    transition: transform 0.2s ease, text-shadow 0.2s ease; /* Smooth transition for the hover effect */
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    transform: translateY(-10px);
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
-
-/** If logo to go to the left in NAV bar.
-nav .logocont {
-    display:flex;
-    background-image: url(Images/CSMK1-no-background.png);
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display:flex;
-    width: 100px; 
-    height: 100px;
-}
-
-nav .logocont a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-}
-
-nav .logocont a:hover {
-    text-shadow: 0 0 15px rgb(0, 0, 0);
-    transition: 0.3s ease;
-}
-*/
 
 .centerlogo {
     display: flex;
     background-image: url(Images/CSMK1-no-background.png);
-    background-size: 100%; /* Enlarges the image within the circle */
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
-    width: 450px; /* Ensure width and height are equal */
-    height: 450px;
-    border-radius: 50%; /* Makes the container circular */
-    margin: 5px auto; /* Centers the circle horizontally */
-    margin-top: 15px;
+    background-position: center;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin: 15px auto;
 }
 
 .middlequote {
     display: flex;
-    justify-content: center; /* Centers the text horizontally */
-    align-items: center; /* Centers the text vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
-    padding: 20px; /* Adds space inside the box */
-    width: auto; /* Fixed width for the box */
+    width: 90%;
+    margin: 0 auto;
 }
+
 /* About Me Section */
 .aboutMeCont {
-    display:flex;
-    flex-direction: row;
-    flex: 1;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
     background-color: black;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.aboutMeBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .MEimg {
     display: flex;
-    justify-content: center;
-    background-color: rgb(230, 230, 230);
-    width: 825px;
-    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    background-image: url('Images/Headshot.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .MEcontent {
+    flex: 1;
+    display: flex;
     flex-direction: column;
-    display: flex;
     justify-content: center;
-    padding: 0 100px 0 100px;
-}
-
-.MEcontent p{
-    display: flex;
-    text-align: center;
-    color:rgb(53, 53, 53);
-    font-size: 20px;
-    padding: 2px;
+    padding: 20px;
+    color: black;
 }
 
 .MEcontent h2 {
-    display:flex;
-    text-align: center;
-    justify-content: center;
-    color:rgb(53, 53, 53);
-    font-size: 40px;
+    font-size: 1.875rem;
     text-align: center;
     text-decoration: underline;
+}
+
+.MEcontent p {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .infoButton {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     background-color: rgb(53, 53, 53);
     color: white;
-    font-size: 20px;
-    margin: 0 auto;
-    padding: 10px;
+    font-size: 1.25rem;
+    padding: 10px 20px;
     border-radius: 5px;
-}
-
-.aboutMeBox {
-    display: flex; /* Aligns the image and content side by side */
-    gap: 20px; /* Adds spacing between the image and content */
-    padding: 10px;
-    background-color: white; /* Optional: Adds a background color */
-}
-.MEimg img {
-    max-width: 100%; /* Optional: Adjusts the image size */
-    max-height: 100%;
-    border-radius: 5px;
-}
-
- /*------------------------------------ Profile Section ------------------------*/
-.top-container h1 {
-    display:flex;
-    color:white;
-    font-size: 50px;
     text-align: center;
-    justify-content:center;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.infoButton:hover {
+    background-color: rgb(33, 33, 33);
+}
+
+.top-container h1 {
+    display: flex;
+    color: white;
+    font-size: 3.125rem;
+    text-align: center;
+    justify-content: center;
     text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 850px) {
+    .aboutMeBox {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        gap: 0;
+    }
+    .MEimg {
+        order: -1;
+        width: 100%;
+        height: auto;
+    }
+    .MEcontent {
+        order: 0;
+        width: 100%;
+        padding: 10px;
+    }
 }
