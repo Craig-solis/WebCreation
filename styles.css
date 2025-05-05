@@ -11,7 +11,7 @@ body {
 .top-container {
     position: relative;
     width: 100%;
-    height: auto; /* Change from 100vh to auto */
+    height: 100vh; /* Change from 100vh to auto */
     overflow: hidden;
     margin-bottom: 0; /* Remove any bottom margin */
     padding-bottom: 20px; /* Add padding to create space for the next section */
@@ -214,9 +214,28 @@ nav .tabscont .tabs a:hover {
     font-size: 20px;
     text-align:center;
     justify-content:center;
-    margin:0 auto;
+    margin:0;
 }
 
+.TilePic {
+    display:flex;
+    background-color: blue;
+    width: 100%; 
+    margin: 0 auto;
+    padding: 10px;
+    color: white;
+    font-size: 20px;  
+}
+.TileParag {
+    display:flex;
+    background-color: red;
+    width: 100%;
+    margin:0 auto;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+
+}
 /* Media Queries for Responsiveness */
 @media (max-width: 850px) {
     .aboutMeBox {
@@ -227,8 +246,8 @@ nav .tabscont .tabs a:hover {
     }
     .MEimg {
         order: -1;
-        width: 100%;
-        height: auto;
+        width: 200px;
+        height: 300px;
     }
     .MEcontent {
         order: 0;
