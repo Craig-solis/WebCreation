@@ -15,6 +15,8 @@ body {
     overflow: hidden;
     margin-bottom: 0; /* Remove any bottom margin */
     padding-bottom: 20px; /* Add padding to create space for the next section */
+    height: 100vh; /* Default for most devices */
+    height: calc(var(--vh, 1vh) * 100); /* Fallback for mobile browsers */
 }
 
 video {
@@ -290,14 +292,41 @@ nav .tabscont .tabs a:hover {
         margin-top: 20px;
         gap: 0;
     }
+    .TilesCont {
+        padding: 0 5% 0 5%;
+    }
+    .ContCont {
+        flex-direction: column;
+    }
     .MEcontent {
         order: 0;
         width: 100%;
         padding: 10px;
     }
+    .MEimg {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MEimgHeadshot {
+        order: -1;
+        width: 100%;
+        max-width: 300px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
     .TileParag p {
+        order:0;
         font-size: 14px;
         padding: 5px;
+    }
+    .TilePic {
+        order:-1;
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
     }
     .TilePicImg {
         max-width: 250px;
@@ -311,10 +340,12 @@ nav .tabscont .tabs a:hover {
         align-items: center;
         justify-content: center;
     }
-    
     .TilesCont {
+        padding: 0 10% 0 10%;
+    }
+    
+    .ContCont {
         flex-direction: column;
-        gap: 10px;
     }
     .TilePicImg {
         max-width: 300px;
