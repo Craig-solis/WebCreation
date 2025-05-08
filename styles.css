@@ -103,13 +103,31 @@ nav .tabscont .tabs a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 1rem;
     font-weight: bold;
     text-align: center;
     width: 90%;
     margin: 0 auto;
     margin-top: 20px; /* Add spacing to ensure visibility */
+}
+
+.middlequote h1 {
+    display: flex;
+    color: white;
+    font-size: 4.5rem;
+    margin: 0;
+    text-decoration: underline overline 2px;
+    text-shadow:
+        1px 2px 5px rgb(0, 0, 0),
+        0 0 5px rgb(2, 217, 255);
+}
+
+.middlequote h2 {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 200%;
+    text-decoration: none;
+    margin: 30px;
+    padding: 0 10% 0 10%;
 }
 
 /* About Me Section */
@@ -138,14 +156,15 @@ nav .tabscont .tabs a:hover {
     display: flex;
     width: 100%;
     max-width: 400px;
-    height: 100%;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    max-height: 650px;
 }
 
 .MEimgHeadshot {
     display: flex;
-    width: 100%;
+    max-width: 400px;
+    max-height: 650px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .MEcontent {
@@ -158,7 +177,7 @@ nav .tabscont .tabs a:hover {
 }
 
 .MEcontent h2 {
-    font-size: 225%;
+    font-size: 250%;
     text-align: center;
     text-decoration: underline;
 }
@@ -173,7 +192,7 @@ nav .tabscont .tabs a:hover {
     display: inline-block;
     background-color: rgb(53, 53, 53);
     color: white;
-    font-size: 1.25rem;
+    font-size: 2rem;
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;
@@ -186,36 +205,25 @@ nav .tabscont .tabs a:hover {
     background-color: rgb(33, 33, 33);
 }
 
-.top-container h1 {
-    display: flex;
-    color: white;
-    font-size: 3.125rem;
-    text-align: center;
-    justify-content: center;
-    text-decoration: underline;
-}
-
 /* Tile Section */
 .aboutTiles {
     display:flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.932);
-    padding: 2% 12% 2% 12%;
 }
 
 .Tilestitles {
     display:flex;
-    color: white;
+    color: rgb(255, 255, 255, 0.65);
     font-size: clamp(1.5rem, 5vw, 3rem);
-    text-decoration: underline;
     text-align: center;
     justify-content: center;
 }
 
 .TilesCont {
     display:flex;
-    margin: 2%;
     flex-direction: column;
+    padding: 0 15% 0 15%;
     gap: 20px;
 }
 
@@ -226,23 +234,22 @@ nav .tabscont .tabs a:hover {
     text-align:center;
     justify-content:center;
     margin:0;
-    padding: 10px;
-    gap: 20px;
 }
 
 .TilePic {
     display:flex;
-    width: 100%; 
-    padding: 2%;
+    width: 100%;
+    padding: 1%;
     color: white;
     font-size: 20px;
 }
 
 .TileParag {
     display:flex;
-    padding: 2%;
+    text-wrap: wrap;
+    padding: 1%;
     width: 100%;
-    color: white;
+    color: rgb(255, 255, 255);
     flex-direction: column;
     justify-content: center;
 }
@@ -252,14 +259,14 @@ nav .tabscont .tabs a:hover {
     color: white;
     text-align: center;
     justify-content: center;
-    text-decoration: underline;
+    font-size: 1.75rem;
     margin: 0;
 }
 
 .TileParag p {
     display:flex;
-    color: white;
-    font-size: 20px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 15px;
     text-align: center;
     justify-content: center;
     padding: 10px;
@@ -268,7 +275,7 @@ nav .tabscont .tabs a:hover {
 .TilePicImg {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 6=80%;
     max-width: 600px;
 }
 
@@ -280,11 +287,6 @@ nav .tabscont .tabs a:hover {
         align-items: center;
         margin-top: 20px;
         gap: 0;
-    }
-    .MEimg {
-        order: -1;
-        width: 200px;
-        height: 250px;
     }
     .MEcontent {
         order: 0;
@@ -302,6 +304,12 @@ nav .tabscont .tabs a:hover {
 
 /* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .aboutMeBox {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .TilesCont {
         flex-direction: column;
         gap: 10px;
@@ -317,12 +325,9 @@ nav .tabscont .tabs a:hover {
 /* Medium devices (desktops, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .aboutMeBox {
-        flex-direction: row;
-        gap: 15px;
-    }
-    .MEimg {
-        max-width: 300px;
-        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .TilePicImg {
         max-width: 400px;
@@ -332,8 +337,7 @@ nav .tabscont .tabs a:hover {
 /* Large devices (large desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .aboutMeBox {
-        max-width: 900px;
-        margin: 0 auto;
+        margin: 0;
     }
     .TilePicImg {
         max-width: 500px;
