@@ -94,37 +94,36 @@ nav .tabscont .tabs a:hover {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     margin: 10px auto;
 }
 
-.middlequote {
+.middlesection {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
     text-align: center;
     width: 90%;
     margin: 0 auto;
     margin-top: 10px;
 }
 
-.middlequote h1 {
+.middlesection h1 {
     display: flex;
     color: white;
-    font-size: 2.5rem;
+    font-size: 6rem;
     margin: 0;
     text-shadow: 1px 2px 5px rgb(0, 0, 0), 0 0 5px rgb(2, 217, 255);
 }
 
-.middlequote h2 {
+.middlesection p {
     display: flex;
     color: rgb(255, 255, 255);
-    font-size: 1.25rem;
+    font-size: 3rem;
     margin: 20px;
     padding: 0 5%;
 }
@@ -139,13 +138,13 @@ nav .tabscont .tabs a:hover {
 .aboutMeBox {
     display: flex;
     flex-direction: column; 
-    -webkit-flex-direciton: column; /* Safari */
-    -moz-flex-direction: column; /* Firefox */
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     background-color: white;
     width: 100%;
-    padding: 40px;
     min-height: 300px;
+    padding: 20px;
 }
 
 .MEimg {
@@ -156,10 +155,10 @@ nav .tabscont .tabs a:hover {
     justify-content: center;
 }
 
-.MEimgHeadshot {
+.MEimgStarWars {
     display: flex;
-    max-width: 350px;
-    max-height: 400px;
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
@@ -169,7 +168,7 @@ nav .tabscont .tabs a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    padding: 30px;
     color: black;
     width: 100%;
 }
@@ -183,7 +182,7 @@ nav .tabscont .tabs a:hover {
 
 .MEcontent p {
     order:0;
-    font-size: 1.5rem;
+    font-size: 2.75rem;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -192,7 +191,7 @@ nav .tabscont .tabs a:hover {
     display: inline-block;
     background-color: rgb(53, 53, 53);
     color: white;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     padding: 5px 10px;
     border-radius: 5px;
     text-align: center;
@@ -215,7 +214,7 @@ nav .tabscont .tabs a:hover {
 .Tilestitles {
     display: flex;
     color: rgb(255, 255, 255, 0.65);
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
     justify-content: center;
 }
@@ -254,7 +253,6 @@ nav .tabscont .tabs a:hover {
     text-wrap: wrap;
     padding: 1%;
     width: 100%;
-    color: rgb(255, 255, 255);
     flex-direction: column;
     justify-content: center;
 }
@@ -264,14 +262,14 @@ nav .tabscont .tabs a:hover {
     color: white;
     text-align: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 3rem;
     margin: 0;
 }
 
 .TileParag p {
     display: flex;
     color: rgba(255, 255, 255, 0.65);
-    font-size: 0.875rem;
+    font-size: 2.5rem;
     text-align: center;
     justify-content: center;
     padding: 5px;
@@ -280,9 +278,17 @@ nav .tabscont .tabs a:hover {
 .TilePicImg {
     display: flex;
     width: 100%;
-    max-width: 150px;
+    height: auto;
     border-radius: 8px;
 
+}
+
+.MEimgHeadshot {
+    display: flex;
+    max-width: 450px;
+    max-height: 800px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 /*Coming Soon Section ----------------------------REMOVE ONCE COMPLETED*/
@@ -295,57 +301,3 @@ nav .tabscont .tabs a:hover {
 }
 
 /* Media Queries for larger devices */
-/* Small devices (tablets, 576px and up) */
-@media (min-width: 576px) {
-    .middlequote h1 {
-        font-size: 3rem;
-    }
-    .middlequote h2 {
-        font-size: 1.5rem;
-    }
-    .aboutMeBox {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    .TilesCont {
-        padding: 0 10%;
-    }
-    .TilePicImg {
-        max-width: 300px;
-    }
-    .TileParag p {
-        font-size: 1rem;
-    }
-}
-
-/* Medium devices (desktops, 768px and up) */
-@media (min-width: 768px) {
-    .aboutMeBox {
-        flex-direction: row; /* Switch to row layout for larger devices */
-    }
-    .TilePicImg {
-        max-width: 400px;
-    }
-}
-
-/* Large devices (large desktops, 992px and up) */
-@media (min-width: 992px) {
-    .aboutMeBox {
-        margin: 0;
-    }
-    .TilePicImg {
-        max-width: 500px;
-    }
-}
-
-/* Extra large devices (larger desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .aboutMeBox {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .TilePicImg {
-        max-width: 600px;
-    }
-}
