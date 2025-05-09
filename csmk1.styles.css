@@ -15,6 +15,7 @@ body {
     min-height: 100vh;
     overflow: hidden;
     padding-bottom: 20px;
+    height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
 }
 
@@ -37,7 +38,7 @@ header {
     gap: 10px;
     color: white;
     flex-direction: row;
-    margin: 10px 20px;
+    margin: 20px 40px;
 }
 
 .fa {
@@ -71,7 +72,7 @@ nav .tabscont {
     flex-wrap: wrap;
     gap: 40px;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 nav .tabscont .tabs a {
@@ -214,7 +215,7 @@ nav .tabscont .tabs a:hover {
 .Tilestitles {
     display: flex;
     color: rgb(255, 255, 255, 0.65);
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
     justify-content: center;
 }
@@ -280,6 +281,17 @@ nav .tabscont .tabs a:hover {
     display: flex;
     width: 100%;
     max-width: 150px;
+    border-radius: 8px;
+
+}
+
+/*Coming Soon Section ----------------------------REMOVE ONCE COMPLETED*/
+.ComingSoon {
+    display:flex;
+    flex-direction: column;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
 }
 
 /* Media Queries for larger devices */
