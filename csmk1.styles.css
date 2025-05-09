@@ -7,6 +7,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     flex-direction: column;
     width: 100%;
+    overflow-x: auto;
 }
 
 .top-container {
@@ -107,7 +108,7 @@ nav .tabscont .tabs a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -168,7 +169,7 @@ nav .tabscont .tabs a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px;
+    margin:40px;
     color: black;
     width: 100%;
 }
@@ -188,13 +189,13 @@ nav .tabscont .tabs a:hover {
 }
 
 .infoButton {
-    display: inline-block;
+    display: flex;
     background-color: rgb(53, 53, 53);
     color: white;
     font-size: 3.5rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
     cursor: pointer;
     margin: 0 auto;
     transition: background-color 0.3s ease;
@@ -222,7 +223,7 @@ nav .tabscont .tabs a:hover {
 .TilesCont {
     display: flex;
     flex-direction: column;
-    padding: 0 5%;
+    padding: 0 5% 3% 0;
     gap: 10px;
 }
 
