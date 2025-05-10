@@ -1,0 +1,87 @@
+/* Media Queries for larger devices */
+
+/* Medium screens (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .TilePicImg {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .MEimgHeadshot {
+        max-width: 600px;
+        max-height: 1000px;
+    }
+
+    .ComingSoon {
+        font-size: 3rem;
+    }
+
+    .footerCont {
+        flex-direction: row;
+        gap: 30px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Large screens (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    .TilePicImg {
+        width: 60%;
+    }
+
+    .MEimgHeadshot {
+        max-width: 800px;
+        max-height: 1200px;
+    }
+
+    .ComingSoon {
+        font-size: 5rem;
+    }
+
+    .footerCont {
+        gap: 50px;
+        font-size: 1.75rem;
+    }
+
+    .aboutMeBox {
+        flex-direction: row;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .MEcontent {
+        margin: 40px;
+    }
+
+    .TilesCont {
+        gap: 30px;
+    }
+
+    .TileParag h3 {
+        font-size: 3rem;
+    }
+
+    .TileParag p {
+        font-size: 2.5rem;
+    }
+}
+
+/* Extra large screens (large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    .TilePicImg {
+        width: 50%;
+    }
+
+    .MEimgHeadshot {
+        max-width: 1000px;
+        max-height: 1400px;
+    }
+
+    .footerCont {
+        font-size: 2rem;
+    }
+
+    .ComingSoon {
+        font-size: 6rem;
+    }
+}

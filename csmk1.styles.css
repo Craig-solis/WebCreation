@@ -301,4 +301,15 @@ nav .tabscont .tabs a:hover {
     text-align: center;
 }
 
+.footerCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.932);
+    padding: 20px;
+    color: white;    
+    gap: 50px;
+    font-size: 1.25rem;
+}
 /* Media Queries for larger devices */
