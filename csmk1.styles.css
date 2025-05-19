@@ -1,4 +1,7 @@
 /* Base styles for mobile-first approach */
+html {
+    scroll-behavior: smooth;
+}
 body {
     display: flex;
     margin: 0;
@@ -132,7 +135,10 @@ nav .tabscont .tabs a:hover {
 /* About Me Section */
 .aboutMeCont {
     display: flex;
-    background-color: black;
+    background-image: url(Images/whitegradient.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-top: 0;
 }
 
@@ -148,24 +154,33 @@ nav .tabscont .tabs a:hover {
     padding: 20px;
 }
 
-.MEimg {
+.aboutTitle {
+    display: flex;
+    color: rgba(56, 56, 56, 0.938);
+    font-size: 5rem;
+    text-align: center;
+    justify-content: center;
     order:-1;
+}
+
+.MEimg {
+    order: 0;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.MEimgStarWars {
+.MEimgHeadshot {
     display: flex;
-    width: 100%;
-    height: auto;
+    max-width: 450px;
+    max-height: 800px;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .MEcontent {
-    order: 0;
+    order: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,7 +207,7 @@ nav .tabscont .tabs a:hover {
     display: flex;
     background-color: rgb(53, 53, 53);
     color: white;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     padding: 15px;
     border-radius: 10px;
     text-decoration: none;
@@ -204,6 +219,39 @@ nav .tabscont .tabs a:hover {
 .infoButton:hover {
     background-color: rgb(33, 33, 33);
 }
+
+/*-----Servvices Section---------*/
+.ServicesCont {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 800px;
+
+}
+
+.LogoTrack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 5s infinite linear;
+}
+
+.LogoTrack img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+@keyframes rotate {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+
+
 
 /* Tile Section */
 .aboutTiles {
@@ -284,13 +332,6 @@ nav .tabscont .tabs a:hover {
 
 }
 
-.MEimgHeadshot {
-    display: flex;
-    max-width: 450px;
-    max-height: 800px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-}
 
 /*Coming Soon Section ----------------------------REMOVE ONCE COMPLETED*/
 .ComingSoon {
