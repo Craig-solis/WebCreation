@@ -223,39 +223,81 @@ nav .tabscont .tabs a:hover {
 /*-----Servvices Section---------*/
 .ServicesCont {
     display: flex;
-    position: relative;
+    flex-direction: column;
     width: 100vw; /* Ensure full viewport width */
-    height: 300px;
+    height: auto;
     perspective: 800px;
     overflow: hidden;
 }
+.Servicetitle {
+    display:flex;
+    color: rgba(56, 56, 56, 0.938);
+    font-size: 5rem;
+    text-align: center;
+    justify-content: center;
+}
 
-.LogoTrack {
-    display: flex;
-    width: max-content; /* Allow content to overflow for animation */
-    animation: slide 15s linear infinite;
+.ServList {
+    display:flex;
+    flex-direction: row;
     align-items: center;
-    gap: 40px; /* Add spacing between images if needed */
+    justify-content: center;
+    gap: 2%;
+    margin-bottom: 20px;
 }
 
-.LogoTrack img {
-    width: 225px;
-    height: 225px;
-    border-radius: 15px;
-    object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+.lists{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Keyframes for infinite horizontal scroll */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-70%);
-    }
+.lists h1 {
+    display:flex;
+    color: rgba(56, 56, 56, 0.938);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lists ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.lists ul li {
+    display: flex;
+    color: white;
+    font-size: 1.5rem;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.CertImages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.CertImages img {
+    width: 250px;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 /* Tile Section */
@@ -265,7 +307,7 @@ nav .tabscont .tabs a:hover {
     background-color: rgba(0, 0, 0, 0.932);
 }
 
-.Tilestitles {
+.PortTitle {
     display: flex;
     color: rgb(255, 255, 255, 0.65);
     font-size: 5rem;
@@ -273,70 +315,39 @@ nav .tabscont .tabs a:hover {
     justify-content: center;
 }
 
-.TilesCont {
-    display: flex;
-    flex-direction: column;
-    padding: 0 5% 3% 0;
-    gap: 10px;
-}
-
-.ContCont {
-    display: flex;
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-    justify-content: center;
-    margin: 0;
-    flex-direction:column;
-}
-
-.TilePic {
-    order: -1;
-    display: flex;
-    width: 100%;
-    padding: 1%;
-    color: white;
-    font-size: 1rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.TileParag {
-    order: 0;
-    display: flex;
-    text-wrap: wrap;
-    padding: 1%;
-    width: 100%;
+.WorkCont {
+    display:flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.TileParag h3 {
-    display: flex;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    font-size: 3rem;
-    margin: 0;
-}
-
-.TileParag p {
-    display: flex;
-    color: rgba(255, 255, 255, 0.65);
-    font-size: 2.5rem;
-    text-align: center;
-    justify-content: center;
-    padding: 5px;
-}
-
-.TilePicImg {
-    display: flex;
     width: 100%;
     height: auto;
-    border-radius: 8px;
-
 }
 
+.DateCont {
+    display:flex;
+    flex-direction: row;
+    padding: 40px;
+    color: rgb(48, 48, 48);
+    font-size: 2.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(165, 165, 165, 0.8);
+    margin: 0 50px 25px 50px;
+}
+
+.date {
+    display: flex;
+    text-align: left;
+    width: 100%;
+}
+
+.datedesc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
 
 /*Coming Soon Section ----------------------------REMOVE ONCE COMPLETED*/
 .ComingSoon {
@@ -359,53 +370,5 @@ nav .tabscont .tabs a:hover {
     font-size: 1.25rem;
 }
 
-/* Add or update these styles */
-.slider {
-    position: relative;
-    width: 400px;
-    margin: 0 auto;
-    text-align: center;
-}
-.slider-track {
-    display: flex;
-    transition: transform 0.5s;
-    width: 100%;
-    overflow: hidden;
-}
-.slider-img {
-    min-width: 100%;
-    max-width: 100%;
-    max-height: 200px;
-    object-fit: contain;
-}
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #fff;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 2;
-    padding: 0 10px;
-    opacity: 0.7;
-}
-.slider-arrow.left { left: 0; }
-.slider-arrow.right { right: 0; }
-.slider-dots {
-    margin-top: 10px;
-}
-.slider-dot {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 4px;
-    background: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.slider-dot.active {
-    background: #333;
-}
 
 /* Media Queries for larger devices */
