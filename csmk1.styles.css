@@ -6,21 +6,20 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
-    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
     flex-direction: column;
     width: 100%;
-    overflow-x: auto;
+
 }
 
 .top-container {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
     padding-bottom: 20px;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 110vh;
 }
 
 video {
@@ -135,11 +134,28 @@ nav .tabscont .tabs a:hover {
 /* About Me Section */
 .aboutMeCont {
     display: flex;
-    background-image: url(Images/whitegradient.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 0;
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+.aboutMeCont::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 40%;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at bottom right,
+        rgba(15, 15, 15, 0.719) 0%,
+        rgb(2, 2, 2) 60%,
+        rgb(0, 0, 0) 100%
+    );
+    z-index: -1;
 }
 
 .aboutMeBox {
@@ -148,7 +164,6 @@ nav .tabscont .tabs a:hover {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: white;
     width: 100%;
     min-height: 300px;
     padding: 20px;
@@ -156,7 +171,7 @@ nav .tabscont .tabs a:hover {
 
 .aboutTitle {
     display: flex;
-    color: rgba(56, 56, 56, 0.938);
+    color: rgba(255, 255, 255, 0.808);
     font-size: 5rem;
     text-align: center;
     justify-content: center;
@@ -185,7 +200,7 @@ nav .tabscont .tabs a:hover {
     flex-direction: column;
     justify-content: center;
     margin:40px;
-    color: black;
+    color: rgba(255, 255, 255, 0.89);
     width: 100%;
 }
 
@@ -223,18 +238,30 @@ nav .tabscont .tabs a:hover {
 /*-----Servvices Section---------*/
 .ServicesCont {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    width: 100vw; /* Ensure full viewport width */
-    height: auto;
-    perspective: 800px;
-    overflow: hidden;
+    width: 100%; /* Ensure full viewport width */
+    height: 90vh;
+    background-image: url(Images/black-tech.jpg);
+    background-position: left;
+    background-size: cover;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+
 }
 .Servicetitle {
-    display:flex;
-    color: rgba(56, 56, 56, 0.938);
+    display: flex;
+    color: rgb(255, 255, 255, 0.65);
     font-size: 5rem;
     text-align: center;
     justify-content: center;
+    margin-bottom: 60px; 
+    z-index: 2;         
+    position: relative;
 }
 
 .ServList {
@@ -246,16 +273,58 @@ nav .tabscont .tabs a:hover {
     margin-bottom: 20px;
 }
 
-.lists{
+.lists.cyb {
     display:flex;
+    width: 30%;
+    height: 35vh;
+    border-radius: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 2px solid rgba(66, 66, 66, 0.932);
+    backdrop-filter: blur(20px);
+    /* transform: translateY(-10%); */
+}
+
+.lists.web {
+    display:flex;
+    width: 33%;
+    height: 35vh;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(66, 66, 66, 0.932);
+    backdrop-filter: blur(20px);
+    margin-top: 20%;
+    /* transform: translateY(10%) */
+}
+
+.lists.misc {
+    display:flex;
+    width: 30%;
+    height: 35vh;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(66, 66, 66, 0.932);
+    backdrop-filter: blur(20px);
+    margin-top: 20%;
+    /* transform: translateY(25%); */
+}
+
+.lists.cyb:hover, .lists.web:hover, .lists.misc:hover {
+    transform: translateY(-10%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px 10px rgba(255, 255, 255);
+
 }
 
 .lists h1 {
     display:flex;
-    color: rgba(56, 56, 56, 0.938);
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.911);
     font-size: 3rem;
     text-align: center;
     margin-bottom: 20px;
@@ -263,6 +332,7 @@ nav .tabscont .tabs a:hover {
 
 .lists ul {
     display: flex;
+    flex-wrap:wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -271,45 +341,162 @@ nav .tabscont .tabs a:hover {
 }
 
 .lists ul li {
-    display: flex;
-    color: white;
-    font-size: 1.5rem;
-    margin: 5px 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    display:flex;
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 2rem;
+    margin: 10px 0;
+    text-align: center;
 }
 
-.CertImages {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
+/*TEST-CAROUSEL--------------------------------------------------*/
+
+/* Container for the entire carousel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+/* Track container to hide overflow */
+.carousel-track-container {
+    overflow: hidden;
+    width: 80%;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding-bottom: 20px;
+    margin: 0 auto;
 }
 
-.CertImages img {
-    width: 250px;
-    height: 80%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+/* The track that holds all cards */
+.carousel-track {
+  display: flex;
+  height: 350px;
+  transition: transform 0.5s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 20px;
 }
+
+/* Each individual card */
+.carousel-card {
+  flex: 0 0 33.3333%; /* 3 cards visible */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  transform: scale(0.95);
+  z-index: 1;
+  background-color:rgba(56, 56, 56, 0.938);
+  border-radius: 10px;
+}
+
+/* Fully opaque center card */
+.carousel-card.active {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* Faded effect for left/right cards */
+.carousel-card.left,
+.carousel-card.right {
+  opacity: 0.7;
+  transform: scale(0.98);
+  z-index: 1;
+}
+
+/* Image and caption styling */
+.carousel-card figure {
+  margin: 0;
+}
+
+.carousel-card h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 10px auto;
+}
+
+.carousel-card img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.carousel-card figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Navigation arrows */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav.left {
+  transform: translateX(20%);
+}
+
+.nav.right {
+  transform: translateX(1500%);
+}
+
+/* Dot navigation */
+.carousel-dots {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    height: 20px;
+}
+
+.carousel-dots button {
+  border: none;
+  background: #ccc;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots button.active {
+  background: #333;
+}
+
+
+
 
 /* Portfolio Section */
 .aboutTiles {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.932);
+    background-color:rgb(8, 8, 8);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20px;
 }
 
 .PortTitle {
     display: flex;
-    color: rgb(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.808);
     font-size: 5rem;
     text-align: center;
     justify-content: center;
@@ -327,11 +514,12 @@ nav .tabscont .tabs a:hover {
     display:flex;
     flex-direction: row;
     padding: 40px;
-    color: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
     font-size: 2.5rem;
-    background-color: white;
+    border: 2px solid rgba(255, 255, 255, 0.932);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 0.925);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(165, 165, 165, 0.8);
     margin: 0 50px 25px 50px;
 }
 
@@ -350,14 +538,17 @@ nav .tabscont .tabs a:hover {
 }
 
 /*Contact Form Section---------------------*/
-.ContactForm {
+.ContactCont {
     display: flex;
     background-color: rgba(57, 57, 57, 0.932);
 }
 
 .FormCont {
     display:flex;
-    background-color:red;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 .ContactForm {
@@ -367,6 +558,12 @@ nav .tabscont .tabs a:hover {
     justify-content: center;
     padding: 20px;
     background-color: blue;
+}
+
+.CondtactForm label {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 /*Coming Soon Section ----------------------------REMOVE ONCE COMPLETED*/
