@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cards = Array.from(track.children); // Update cards list
 
-  // Use offsetWidth for reliability
   function getCardWidth() {
     return cards[1].offsetWidth;
   }
@@ -30,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 1; // Start at first real card
 
   function setTrackPosition(animate = true) {
-    const cardWidth = getCardWidth();
+    const cardStyle = getComputedStyle(cards[1]);
+    const cardWidth = getCardWidth() + parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight);
     const containerWidth = getContainerWidth();
-    // Calculate offset so the active card is centered
     const offset = (containerWidth - cardWidth) / 2;
     if (!animate) track.style.transition = 'none';
     else track.style.transition = 'transform 0.5s ease-in-out';
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setTrackPosition(false);
 
-  // Create 5 dots for 5 real cards
+  // Create dots for real cards
   dotsNav.innerHTML = '';
   for (let i = 0; i < totalCards; i++) {
     const dot = document.createElement('button');
@@ -91,6 +90,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
   rightButton.addEventListener('click', moveToNext);
   leftButton.addEventListener('click', moveToPrev);
+
+  // --- Feature 1: Click on left/right card to activate it ---
+  track.addEventListener('click', (e) => {
+    const clickedCard = e.target.closest('.carousel-card');
+    if (!clickedCard) return;
+    const idx = cards.indexOf(clickedCard);
+    if (idx === currentIndex - 1) {
+      moveToPrev();
+    } else if (idx === currentIndex + 1) {
+      moveToNext();
+    }
+  });
+
+  // --- Feature 2: Swipe/drag support (mouse and touch) ---
+  let startX = 0;
+  let isDragging = false;
+  let animationFrame;
+
+  function onDragStart(e) {
+    isDragging = true;
+    startX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+    track.style.transition = 'none';
+  }
+
+  function onDragMove(e) {
+    if (!isDragging) return;
+    const x = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+    const dx = x - startX;
+    const cardStyle = getComputedStyle(cards[1]);
+    const cardWidth = getCardWidth() + parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight);
+    const containerWidth = getContainerWidth();
+    const offset = (containerWidth - cardWidth) / 2;
+    track.style.transform = `translateX(${-cardWidth * currentIndex + offset + dx}px)`;
+  }
+
+  function onDragEnd(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    const x = e.type.startsWith('touch') ? (e.changedTouches[0]?.clientX ?? 0) : e.clientX;
+    const dx = x - startX;
+    const threshold = getCardWidth() / 4; // Swipe at least 1/4 card width
+    if (dx > threshold) {
+      moveToPrev();
+    } else if (dx < -threshold) {
+      moveToNext();
+    } else {
+      setTrackPosition();
+    }
+  }
+
+  // Mouse events
+  track.addEventListener('mousedown', onDragStart);
+  window.addEventListener('mousemove', onDragMove);
+  window.addEventListener('mouseup', onDragEnd);
+
+  // Touch events
+  track.addEventListener('touchstart', onDragStart, { passive: true });
+  window.addEventListener('touchmove', onDragMove, { passive: false });
+  window.addEventListener('touchend', onDragEnd);
 
   track.addEventListener('transitionend', () => {
     if (cards[currentIndex].id === 'first-clone') {
