@@ -1,6 +1,6 @@
 /* Base styles for mobile-first approach */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
     display: flex;
@@ -234,6 +234,7 @@ nav .tabscont .tabs a:hover {
 .infoButton:hover {
     background-color: rgb(33, 33, 33);
 }
+
 
 /*-----Servvices Section---------*/
 .ServicesCont {
@@ -552,7 +553,7 @@ nav .tabscont .tabs a:hover {
 
 .contactTitle {
     display: flex;
-    color:rgba(57, 57, 57, 0.932);
+    color:rgba(255, 255, 255, 0.808);
     font-size: 5rem;
 }
 
