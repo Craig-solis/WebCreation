@@ -139,6 +139,9 @@ nav .tabscont .tabs a:hover {
     background-position: center;
     margin-top: 0;
     position: relative; /* Needed for pseudo-element positioning */
+    background-image: url(Images/black-tech.jpg);
+    background-size: cover;
+    background-position: right;
 }
 
 .aboutMeCont::after {
