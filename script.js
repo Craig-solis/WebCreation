@@ -195,7 +195,7 @@ window.addEventListener('DOMContentLoaded', () => {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.font = fontSize + "px monospace";
-    ctx.fillStyle = "#FFA500";
+    ctx.fillStyle = "rgb(0, 255, 200)";
 
     for (let i = 0; i < drops.length; i++) {
       const text = chars[Math.floor(Math.random() * chars.length)];
