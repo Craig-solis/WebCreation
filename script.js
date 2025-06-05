@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel-track');
   const dotsNav = document.querySelector('.carousel-dots');
@@ -210,4 +211,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setInterval(draw, 60);
 });
-
+*/
