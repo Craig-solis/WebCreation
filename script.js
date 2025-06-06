@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateOpacity();
 });
 */
-/*
+
 window.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('matrixRain');
   const ctx = canvas.getContext('2d');
@@ -212,4 +212,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setInterval(draw, 60);
 });
-*/
+

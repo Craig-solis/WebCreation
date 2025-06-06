@@ -285,27 +285,40 @@ nav .tabscont .tabs a:hover {
     align-items: center;
     flex-direction: column;
     width: 100%; /* Ensure full viewport width */
-    height: 90vh;
+    height: auto;
     background-image: url(Images/black-tech.jpg);
     background-position: left;
     background-size: cover;
     position: relative;
-    padding-top: 20px;
     padding-bottom: 20px;
     margin: 0 auto;
     box-sizing: border-box;
 
 
+
 }
 .Servicetitle {
     display: flex;
-    color: rgb(255, 255, 255, 0.65);
+    color: rgb(255, 255, 255, 0.75);
     font-size: 5rem;
+    width: 100%;
     text-align: center;
     justify-content: center;
-    margin-bottom: 60px; 
-    z-index: 2;         
-    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.serviceGlow {
+    display:flex;
+    position: absolute;
+    border-radius: 50%;
+    width: 300px;
+    height: 15%;
+    background-color: rgb(0, 255, 200);
+    box-shadow: 0px 0px 40px 60px rgb(255, 255, 255);
+    filter: blur(500px);
+    transform:translate(90%, 100%);
+    overflow: hidden;
 }
 
 .ServList {
@@ -392,6 +405,81 @@ nav .tabscont .tabs a:hover {
     text-align: center;
 }
 
+.certs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index:0;
+}
+ .certtitle {
+    display: flex;
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 5rem;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 40px;
+    flex-direction: row;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.certCard {
+    display:flex;
+    font-size: 2.5rem;
+    color: white;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    max-width: 450px;
+    height: 650px;
+    border-radius: 20px;
+    background-color: rgba(116, 116, 116, 0.507);
+}
+
+.certCard:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.808);
+}
+
+.certCard img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cardDesc {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.certCard h2 {
+    font-size: 3rem;
+    margin: 10px 0;
+    text-align: center;
+    width: 80%;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.932);
+}
+
+.certCard p {
+    font-size: 2.75rem;
+    color: white;
+    text-align: center;
+}
 /*TEST-CAROUSEL--------------------------------------------------*/
 
 /* Container for the entire carousel */
