@@ -168,37 +168,6 @@ nav .tabscont .tabs a:hover {
     background-image: url(Images/black-tech.jpg);
     background-size: cover;
     background-position: right;
-    z-index: -1;
-}
-.aboutGlow {
-    display:flex;
-    position: absolute;
-    border-radius: 50%;
-    width: 100%;
-    height: 15%;
-    background-color: rgb(0, 255, 200);
-    box-shadow: 0px 0px 40px 60px rgb(255, 255, 255);
-    filter: blur(300px);
-    transform: rotate(90deg) translate(110%, 250%);
-    overflow: hidden;
-    z-index: 0;
-}
-
-.aboutMeCont::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 40%;
-    height: 40%;
-    pointer-events: none;
-    background: radial-gradient(
-        circle at bottom right,
-        rgba(15, 15, 15, 0.719) 0%,
-        rgb(2, 2, 2) 60%,
-        rgb(0, 0, 0) 100%
-    );
-    z-index: -1;
 }
 
 .aboutMeBox {
