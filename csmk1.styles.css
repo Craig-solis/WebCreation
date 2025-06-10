@@ -17,7 +17,7 @@ body {
 .top-container {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vb;
     padding-bottom: 20px;
     height: 100dvh;
     background: linear-gradient (to bottom, rgb(2, 217, 255), transparent 60%);
@@ -480,143 +480,6 @@ nav .tabscont .tabs a:hover {
     color: white;
     text-align: center;
 }
-/*TEST-CAROUSEL--------------------------------------------------*/
-
-/* Container for the entire carousel */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
-/* Track container to hide overflow */
-.carousel-track-container {
-    overflow: hidden;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* The track that holds all cards */
-.carousel-track {
-  display: flex;
-  height: 350px;
-  transition: transform 0.5s ease-in-out;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* Each individual card */
-.carousel-card {
-  flex: 0 0 33.3333%; /* 3 cards visible */
-  box-sizing: border-box;
-  padding: 10px;
-  margin: 0 10px; /* Add horizontal margin for spacing */
-  text-align: center;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-  transform: scale(1);
-  z-index: 1;
-  background-color:rgba(56, 56, 56, 0.938);
-  border-radius: 10px;
-  max-width: 350px; /* Prevent cards from getting too wide */
-}
-
-/* Fully opaque center card */
-.carousel-card.active {
-  opacity: 1;
-  transform: scale(1.05);
-  z-index: 2;
-}
-
-/* Faded effect for left/right cards */
-.carousel-card.left,
-.carousel-card.right {
-  opacity: 0.7;
-  transform: scale(0.98);
-  z-index: 1;
-}
-
-/* Image and caption styling */
-.carousel-card figure {
-  margin: 0;
-}
-
-.carousel-card h2 {
-    font-size: 1.5rem;
-    color: white;
-    margin: 10px auto;
-}
-
-.carousel-card img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-}
-
-.carousel-card figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: white;
-}
-
-/* Navigation arrows */
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-  z-index: 10;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav.left {
-  transform: translateX(20%);
-}
-
-.nav.right {
-  transform: translateX(1500%);
-}
-
-/* Dot navigation */
-.carousel-dots {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    height: 20px;
-}
-
-.carousel-dots button {
-  border: none;
-  background: #ccc;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.carousel-dots button.active {
-  background: #333;
-}
-
-
-
 
 /* Portfolio Section */
 .aboutTiles {
@@ -628,47 +491,20 @@ nav .tabscont .tabs a:hover {
     padding-bottom: 20px;
 }
 
+.commingSoon {
+    display:flex;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(0, 255, 200) -10%, black 100%);
+}
+
 .PortTitle {
     display: flex;
     color: rgba(255, 255, 255, 0.808);
     font-size: 5rem;
     text-align: center;
     justify-content: center;
-}
-
-.WorkCont {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-}
-
-.DateCont {
-    display:flex;
-    flex-direction: row;
-    padding: 40px;
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    border: 2px solid rgba(255, 255, 255, 0.932);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 0.925);
-    border-radius: 10px;
-    margin: 0 50px 25px 50px;
-}
-
-.date {
-    display: flex;
-    text-align: left;
-    width: 100%;
-}
-
-.datedesc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
 }
 
 /*Contact Form Section---------------------*/
