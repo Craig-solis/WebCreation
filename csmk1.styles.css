@@ -405,7 +405,8 @@ nav .tabscont .tabs a:hover {
 }
 
 .certCard {
-    display:flex;
+    display: flex;
+    position: relative;
     font-size: 2.5rem;
     color: white;
     flex-direction: column;
@@ -417,6 +418,39 @@ nav .tabscont .tabs a:hover {
     height: 650px;
     border-radius: 20px;
     background-color: rgba(116, 116, 116, 0.507);
+    overflow: hidden;
+    order: -1;
+    backdrop-filter: blur(20px); /* Add this for blur effect */
+    -webkit-backdrop-filter: blur(20px); /* For Safari support */
+    z-index: 0;
+}
+
+.certCard::after {
+    content: '';
+    position: absolute;
+    background: rgba(116, 116, 116);
+    inset: 5px;
+    border-radius: 16px;
+}
+
+.certCard::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 125%;
+    box-shadow: 0 0 60px 30px rgba(0,255,242,0.7), 0 0 120px 60px rgba(0,255,242,0.3);
+    filter: blur(25px);
+    background: rgb(255, 255, 255);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
 }
 
 .certCard:hover {
@@ -427,6 +461,7 @@ nav .tabscont .tabs a:hover {
     width: 40%;
     height: auto;
     border-radius: 10px;
+    z-index: 1;
 }
 
 .cardDesc {
@@ -435,6 +470,7 @@ nav .tabscont .tabs a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
+    z-index: 1;
 }
 .certCard h2 {
     font-size: 3rem;
@@ -465,7 +501,7 @@ nav .tabscont .tabs a:hover {
     font-size: 5rem;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, rgba(0, 255, 200) -10%, black 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0) ,rgba(0,255,242) 150%);
 }
 
 .PortTitle {
