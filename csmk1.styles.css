@@ -111,9 +111,14 @@ nav .tabscont .tabs a {
 }
 
 nav .tabscont .tabs a:hover {
-    text-shadow: 0 0 5px rgb(255, 255, 255);
+    text-shadow: 0 0 12px rgb(255, 255, 255);
     transform: translateY(-5px);
     transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.topDescrp {
+    display:flex;
+    flex-direction: column;
 }
 
 .centerlogo {
@@ -216,13 +221,6 @@ nav .tabscont .tabs a:hover {
     width: 100%;
 }
 
-.MEcontent h2 {
-    order:0;
-    font-size: 1.5rem;
-    text-align: center;
-    text-decoration: underline;
-}
-
 .MEcontent p {
     order:0;
     font-size: 2.75rem;
@@ -244,7 +242,7 @@ nav .tabscont .tabs a:hover {
 }
 
 .infoButton:hover {
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(102, 102, 102);
 }
 
 

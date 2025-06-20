@@ -1,87 +1,167 @@
-/* Media Queries for larger devices */
-
-/* Medium screens (tablets, 768px and up) */
+/* Tablet screens (min-width: 768px) */
 @media (min-width: 768px) {
-    .TilePicImg {
-        width: 80%;
-        margin: 0 auto;
-    }
+  header {
+    font-size: 2.5rem;
+    margin: 30px 60px;
+  }
 
-    .MEimgHeadshot {
-        max-width: 600px;
-        max-height: 1000px;
-    }
+  .aboutMeBox {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+  }
 
-    .ComingSoon {
-        font-size: 3rem;
-    }
+  .MEimgHeadshot {
+    max-width: 600px;
+    max-height: 1000px;
+  }
 
-    .footerCont {
-        flex-direction: row;
-        gap: 30px;
+  .MEcontent h2 {
+    font-size: 2rem;
+  }
+
+  .MEcontent p {
+    font-size: 3rem;
+  }
+
+  .footerCont {
+    font-size: 1.5rem;
+    gap: 30px;
+  }
+
+  .ServList {
+    flex-direction: row;
+    gap: 3%;
+  }
+
+  .lists.cyb,
+  .lists.web,
+  .lists.misc {
+    width: 30%;
+    height: 40vh;
+    margin-top: 0;
+  }
+
+  .Cards {
+    gap: 30px;
+  }
+
+  .certCard {
+    width: 40%;
+    height: 600px;
+  }
+}
+
+/* Desktop screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+  header {
+    font-size: 3rem;
+    margin: 40px 100px;
+  }
+
+  .aboutMeBox {
+    gap: 60px;
+    padding: 60px;
+  }
+
+  .MEimgHeadshot {
+    max-width: 800px;
+    max-height: 1200px;
+  }
+
+  .MEcontent h2 {
+    font-size: 2.5rem;
+  }
+
+  .MEcontent p {
+    font-size: 3.5rem;
+  }
+
+  .footerCont {
+    font-size: 1.75rem;
+    gap: 50px;
+  }
+
+  .ServList {
+    gap: 5%;
+  }
+
+  .lists.cyb,
+  .lists.web,
+  .lists.misc {
+    width: 28%;
+    height: 45vh;
+  }
+
+  .Cards {
+    gap: 40px;
+  }
+
+  .certCard {
+    width: 30%;
+    height: 650px;
+  }
+}
+
+/* Large desktop screens (min-width: 1440px) */
+@media (min-width: 1440px) {
+    /* ----------Top Container/Section--------------- */
+    nav .tabscont {
         font-size: 1.5rem;
     }
-}
 
-/* Large screens (desktops, 1024px and up) */
-@media (min-width: 1024px) {
-    .TilePicImg {
-        width: 60%;
-    }
-
-    .MEimgHeadshot {
-        max-width: 800px;
-        max-height: 1200px;
-    }
-
-    .ComingSoon {
-        font-size: 5rem;
-    }
-
-    .footerCont {
-        gap: 50px;
-        font-size: 1.75rem;
-    }
-
-    .aboutMeBox {
+    .topDescrp {
+        display:flex;
         flex-direction: row;
-        gap: 40px;
-        padding: 40px;
+        padding-left: 100px;
+        margin: 0 100px 0 100px;
+        border: 2px solid rgba(66, 66, 66, 0.932);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px 5px white;
+        border-radius: 20px;
     }
 
-    .MEcontent {
-        margin: 40px;
+    .centerlogo {
+        max-width: 500px;
+        
     }
 
-    .TilesCont {
-        gap: 30px;
+    .middlesection h1 {
+        margin-bottom: 20px;
     }
 
-    .TileParag h3 {
-        font-size: 3rem;
-    }
-
-    .TileParag p {
-        font-size: 2.5rem;
-    }
-}
-
-/* Extra large screens (large desktops, 1440px and up) */
-@media (min-width: 1440px) {
-    .TilePicImg {
-        width: 50%;
-    }
-
-    .MEimgHeadshot {
-        max-width: 1000px;
-        max-height: 1400px;
-    }
-
-    .footerCont {
+    .middlesection p {
         font-size: 2rem;
+        padding: 0 100px 0 100px;
     }
 
-    .ComingSoon {
-        font-size: 6rem;
-    }
+    /*----------About Me Container/Section-------------------*/
+  .aboutMeBox {
+    flex-direction: row;
+    gap: 80px;
+    padding: 80px;
+  }
+
+  .MEimgHeadshot {
+    max-width: 500px;
+    max-height: auto;
+  }
+
+  .MEcontent p {
+    font-size: 1.5rem;
+  }
+
+  .infoButton {
+    font-size: 1.5rem;
+  }
+
+  .footerCont {
+    font-size: 2rem;
+    gap: 70px;
+  }
+
+  .certCard {
+    width: 25%;
+    height: 700px;
+  }
 }
