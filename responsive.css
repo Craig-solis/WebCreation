@@ -136,10 +136,22 @@
     }
 
     /*----------About Me Container/Section-------------------*/
-  .aboutMeBox {
-    flex-direction: row;
+  .aboutMeCont {
+    height: 100dvh auto;
+  }
+  
+    .aboutMeBox {
     gap: 80px;
-    padding: 80px;
+    padding: 50px;
+  }
+
+  .aboutTitle {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .AboutME {
+    flex-direction: row;
   }
 
   .MEimgHeadshot {
@@ -154,14 +166,58 @@
   .infoButton {
     font-size: 1.5rem;
   }
-
-  .footerCont {
-    font-size: 2rem;
-    gap: 70px;
+  /*----------Certs Section---------*/
+  .lists.cyb, .lists.web, .lists.misc {
+    height: 550px;
+    width: 50%;
   }
 
+  .ServList {
+    width: 80%;
+    margin-top: 50px;
+  }
   .certCard {
-    width: 25%;
-    height: 700px;
+    width: 15%;
+    max-height: 400px;
   }
+
+  .certCard h2 {
+    font-size: 2rem;
+  }
+
+  .certCard p{
+    font-size: 1.5rem;
+  }
+
+/*------Contact Form------------*/
+.ContactCont {
+    width: 100%;
+    height: auto;
+}
+.ContactForm {
+    width: 50%;
+}
+.label {
+    font-size: 1.5rem;
+}
+.inputBox {
+    font-size: 1rem;
+    padding: 10px;
+}
+.textArea {
+    font-size: 1.25rem;
+    padding: 16px;
+    min-height: 200px;
+}
+.contactButton {
+    margin: 3% auto;
+}
+/* ----------------Footer Secttion--------------*/
+  .footerCont {
+    font-size: 1rem;
+    gap: 20px;
+    padding: 0;
+  }
+
+
 }
