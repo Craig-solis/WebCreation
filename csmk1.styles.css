@@ -191,7 +191,7 @@ nav .tabscont .tabs a:hover {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px 2px white;
     padding: 0;
-    margin: 0 15% 5%;
+    margin: 0 5% 5%;
 }
 
 .aboutMeBox {
@@ -277,17 +277,15 @@ nav .tabscont .tabs a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%; /* Ensure full viewport width */
+    width: 100vw; /* Ensure full viewport width */
     height: auto;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px 2px white;
-    padding: 50px;
-    margin: 0 auto;
+    padding: 0px;
+    margin: 0;
     box-sizing: border-box;
-
-
-
 }
+
 .Servicetitle {
     display: flex;
     color: rgb(255, 255, 255, 0.75);
@@ -305,11 +303,12 @@ nav .tabscont .tabs a:hover {
     align-items: center;
     justify-content: center;
     gap: 2%;
-    margin-bottom: 20px;
+    margin: 80px 0 20px 0;
 }
 
-.lists.cyb {
+.lists.cyb, .lists.misc, .lists.web {
     display:flex;
+    flex-wrap: wrap;
     width: 30%;
     height: 35vh;
     border-radius: 10px;
@@ -318,35 +317,6 @@ nav .tabscont .tabs a:hover {
     justify-content: center;
     border: 2px solid rgba(66, 66, 66, 0.932);
     backdrop-filter: blur(20px);
-    /* transform: translateY(-10%); */
-}
-
-.lists.web {
-    display:flex;
-    width: 33%;
-    height: 35vh;
-    border-radius: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(66, 66, 66, 0.932);
-    backdrop-filter: blur(20px);
-    margin-top: 20%;
-    /* transform: translateY(10%) */
-}
-
-.lists.misc {
-    display:flex;
-    width: 30%;
-    height: 35vh;
-    border-radius: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(66, 66, 66, 0.932);
-    backdrop-filter: blur(20px);
-    margin-top: 20%;
-    /* transform: translateY(25%); */
 }
 
 .lists.cyb:hover, .lists.web:hover, .lists.misc:hover {
@@ -389,6 +359,7 @@ nav .tabscont .tabs a:hover {
     align-items: center;
     width: 100%;
     height: 100%;
+    margin-bottom: 60px;
     z-index:0;
 }
  .certtitle {
@@ -409,7 +380,6 @@ nav .tabscont .tabs a:hover {
     height: auto;
     gap: 20px;
     flex-direction: row;
-    padding: 20px;
     box-sizing: border-box;
 }
 
