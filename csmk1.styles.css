@@ -41,9 +41,8 @@ body {
 .top-container {
     position: relative;
     width: 100%;
-    min-height: 100vb;
+    min-height: 100vh;
     padding-bottom: 20px;
-    height: 100dvh;
 }
 
 /*
@@ -174,7 +173,7 @@ nav .tabscont .tabs a:hover {
     color: white;
     font-size: 6rem;
     margin: 0;
-    text-shadow: 1px 2px 5px rgb(0, 0, 0), 0 0 5px rgb(2, 217, 255);
+    text-shadow: 0 0 10px #fff;
 }
 
 .middlesection p {
@@ -277,13 +276,13 @@ nav .tabscont .tabs a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100vw; /* Ensure full viewport width */
     height: auto;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px 2px white;
     padding: 0px;
-    margin: 0;
     box-sizing: border-box;
+    margin: 2% 5%;
+
 }
 
 .Servicetitle {
@@ -465,11 +464,14 @@ nav .tabscont .tabs a:hover {
 }
 
 /* Portfolio Section */
-.aboutTiles {
+.PortTiles {
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(10px);
     padding-bottom: 20px;
+    border: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px 2px white;
+    margin: 5% 5%;
 }
 
 .commingSoon {
@@ -494,6 +496,9 @@ nav .tabscont .tabs a:hover {
     flex-direction:column;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px 2px white;
+    margin: 5% 5%;
 }
 
 .contactTitle {

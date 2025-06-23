@@ -1,59 +1,158 @@
 /* Tablet screens (min-width: 768px) */
 @media (min-width: 768px) {
-  header {
-    font-size: 2.5rem;
-    margin: 30px 60px;
+
+/* ----------Top Container/Section--------------- */
+  nav .tabscont {
+      font-size: 1.25rem;
   }
 
-  .aboutMeBox {
-    flex-direction: column;
+  .topDescrp {
+      display:flex;
+      flex-direction: column;
+      margin: 0 50px 0 50px;
+      border: 2px solid rgba(66, 66, 66, 0.932);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px 5px white;
+      border-radius: 20px;
+      align-items: center;
+  }
+
+  .centerlogo {
+      max-width: 300px;
+      
+  }
+
+  .middlesection h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+  }
+
+  .middlesection p {
+      font-size: 1.5rem;
+      padding: 0 50px 0 50px;
+  }
+/*----------About Me Container/Section-------------------*/
+  .aboutMeCont {
+    height: 100dvh auto;
+  }
+  
+    .aboutMeBox {
     gap: 40px;
-    padding: 40px;
+    padding: 50px;
+  }
+
+  .aboutTitle {
+    font-size: 2.5rem;
+    margin: 10px;
+    text-shadow: 0 0 10px #fff;
+  }
+
+  .AboutME {
+    flex-direction: column;
   }
 
   .MEimgHeadshot {
-    max-width: 600px;
-    max-height: 1000px;
-  }
-
-  .MEcontent h2 {
-    font-size: 2rem;
+    max-width: 300px;
+    max-height: auto;
   }
 
   .MEcontent p {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 
-  .footerCont {
+  .infoButton {
     font-size: 1.5rem;
-    gap: 30px;
+  }
+/*----------Certs Section---------*/
+  .Servicetitle {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-shadow: 0 0 10px #fff;
+  }
+  .lists.cyb, .lists.web, .lists.misc {
+    height: 50vh;
+    width: 100%;
+
+  }
+
+  .lists h1{
+    font-size: 1.5rem;
+  }
+
+  .lists ul li{
+    font-size: 1.25rem;
   }
 
   .ServList {
-    flex-direction: row;
-    gap: 3%;
+    width: 80%;
+    margin-top: 50px;
   }
-
-  .lists.cyb,
-  .lists.web,
-  .lists.misc {
-    width: 30%;
-    height: 40vh;
-    margin-top: 0;
+  .certtitle {
+    text-shadow: 0 0 10px #fff;
+    font-size: 2.5rem;
   }
-
-  .Cards {
-    gap: 30px;
-  }
-
   .certCard {
-    width: 40%;
-    height: 600px;
+    width: 25%;
+    max-height: 350px;
   }
-}
 
-/* Desktop screens (min-width: 1024px) */
-@media (min-width: 1024px) {
+  .certCard h2 {
+    font-size: 1.5rem;
+  }
+
+  .certCard p{
+    font-size: 1.25rem;
+  }
+
+/*-------Portfolio Seciton----------*/
+  .portTiles {
+    display: flex; 
+    margin: none;
+  }
+  .PortTitle {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #fff;
+
+  }
+  .commingSoon {
+    font-size: 2rem;
+    color: #fff;
+  }
+/*------Contact Form------------*/
+  .contactTitle {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #fff;
+  }
+  .ContactCont {
+    height: auto;
+  }
+  .ContactForm {
+    width: 90%;
+  }
+  .label {
+    font-size: 1.5rem;
+  }
+  .inputBox {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .textArea {
+    font-size: 1.25rem;
+    min-height: 200px;
+  }
+  .contactButton {
+    font-size: 1.25rem;
+    margin: 3% auto;
+  }
+/* ----------------Footer Secttion--------------*/
+  .footerCont {
+  font-size: 1rem;
+  gap: 20px;
+  padding: 0;
+  }
+
+  /* Desktop screens (min-width: 1024px) */
+  @media (min-width: 1024px) {
   header {
     font-size: 3rem;
     margin: 40px 100px;
@@ -101,7 +200,7 @@
     width: 30%;
     height: 650px;
   }
-}
+  }
 
 /* Large desktop screens (min-width: 1440px) */
 @media (min-width: 1440px) {
@@ -220,4 +319,5 @@
   }
 
 
+}
 }
