@@ -1,7 +1,8 @@
-/* Tablet screens (min-width: 768px) */
+
+/* Tablet screens (min-width: 768px) 
 @media (min-width: 768px) {
 
-/* ----------Top Container/Section--------------- */
+/* ----------Top Container/Section--------------- *
   nav .tabscont {
       font-size: 1.25rem;
   }
@@ -31,7 +32,7 @@
       font-size: 1.5rem;
       padding: 0 50px 0 50px;
   }
-/*----------About Me Container/Section-------------------*/
+/*----------About Me Container/Section-------------------*
   .aboutMeCont {
     height: 100dvh auto;
   }
@@ -63,7 +64,7 @@
   .infoButton {
     font-size: 1.5rem;
   }
-/*----------Certs Section---------*/
+/*----------Certs Section---------*
   .Servicetitle {
     font-size: 2.5rem;
     margin: 20px 0;
@@ -104,7 +105,7 @@
     font-size: 1.25rem;
   }
 
-/*-------Portfolio Seciton----------*/
+/*-------Portfolio Seciton----------*
   .portTiles {
     display: flex; 
     margin: none;
@@ -118,7 +119,7 @@
     font-size: 2rem;
     color: #fff;
   }
-/*------Contact Form------------*/
+/*------Contact Form------------*
   .contactTitle {
     font-size: 2.5rem;
     text-shadow: 0 0 10px #fff;
@@ -144,14 +145,14 @@
     font-size: 1.25rem;
     margin: 3% auto;
   }
-/* ----------------Footer Secttion--------------*/
+/* ----------------Footer Secttion--------------*
   .footerCont {
   font-size: 1rem;
   gap: 20px;
   padding: 0;
   }
 
-  /* Desktop screens (min-width: 1024px) */
+  /* Desktop screens (min-width: 1024px) *
   @media (min-width: 1024px) {
   header {
     font-size: 3rem;
@@ -202,9 +203,9 @@
   }
   }
 
-/* Large desktop screens (min-width: 1440px) */
+/* Large desktop screens (min-width: 1440px) *
 @media (min-width: 1440px) {
-    /* ----------Top Container/Section--------------- */
+    /* ----------Top Container/Section--------------- *
     nav .tabscont {
         font-size: 1.5rem;
     }
@@ -234,7 +235,7 @@
         padding: 0 100px 0 100px;
     }
 
-    /*----------About Me Container/Section-------------------*/
+    /*----------About Me Container/Section-------------------*
   .aboutMeCont {
     height: 100dvh auto;
   }
@@ -265,7 +266,7 @@
   .infoButton {
     font-size: 1.5rem;
   }
-  /*----------Certs Section---------*/
+  /*----------Certs Section---------*
   .lists.cyb, .lists.web, .lists.misc {
     height: 550px;
     width: 50%;
@@ -288,7 +289,7 @@
     font-size: 1.5rem;
   }
 
-/*------Contact Form------------*/
+/*------Contact Form------------*
 .ContactCont {
     width: 100%;
     height: auto;
@@ -311,7 +312,7 @@
 .contactButton {
     margin: 3% auto;
 }
-/* ----------------Footer Secttion--------------*/
+/* ----------------Footer Secttion--------------*
   .footerCont {
     font-size: 1rem;
     gap: 20px;
